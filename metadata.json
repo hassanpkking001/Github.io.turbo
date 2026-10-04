@@ -1,0 +1,6 @@
+{
+  "name": "TURBO LUXE | Royal Couture & COD",
+  "description": "Ultra-luxurious high-fashion clothing brand with nationwide Cash On Delivery (COD), instant WhatsApp concierge ordering, and Android PWA experience.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

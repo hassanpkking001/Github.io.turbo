@@ -1,0 +1,2655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>TURBO LUXE | Royal Haute Couture & Cash On Delivery</title>
+  <meta name="description" content="TURBO LUXE - Ultra-luxurious high-end couture fashion. Cash on Delivery (COD) available nationwide with 24-48 hr express delivery & direct WhatsApp ordering." />
+  <meta name="theme-color" content="#0A0A0A" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="TURBO LUXE" />
+  <link rel="manifest" href="/manifest.json" />
+
+  <meta property="og:title" content="TURBO LUXE | Royal Haute Couture & Cash On Delivery" />
+  <meta property="og:description" content="Shop opulent handcrafted couture with Nationwide Cash On Delivery & instant WhatsApp ordering." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Google Fonts: Playfair Display & Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg-dark: #0A0A0A;
+      --bg-card: #121212;
+      --bg-card-hover: #181818;
+      --gold-primary: #D4AF37;
+      --gold-bronze: #AA771C;
+      --gold-light: #FCF6BA;
+      --gold-gradient: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
+      --text-muted: #9E9E9E;
+      --text-light: #F5F5F5;
+      --border-gold: rgba(212, 175, 55, 0.3);
+      --border-gold-bright: rgba(212, 175, 55, 0.7);
+      --gold-glow: 0 0 15px rgba(212, 175, 55, 0.25);
+      --gold-glow-strong: 0 0 25px rgba(212, 175, 55, 0.45);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, .font-serif {
+      font-family: 'Playfair Display', serif;
+      letter-spacing: 0.5px;
+    }
+
+    /* Metallic Gold Text Gradient */
+    .gold-gradient-text {
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    /* Golden Buttons */
+    .btn-gold {
+      background: var(--gold-gradient);
+      color: #0A0A0A;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 12px 24px;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 15px rgba(191, 149, 63, 0.3);
+      text-decoration: none;
+    }
+    .btn-gold:hover {
+      box-shadow: var(--gold-glow-strong);
+      transform: translateY(-2px);
+      filter: brightness(1.1);
+    }
+
+    .btn-gold-outline {
+      background: transparent;
+      border: 1px solid var(--gold-primary);
+      color: var(--gold-primary);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 0.82rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 11px 20px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+    .btn-gold-outline:hover {
+      background: rgba(212, 175, 55, 0.15);
+      border-color: #FCF6BA;
+      color: #FCF6BA;
+      box-shadow: var(--gold-glow);
+    }
+
+    .btn-whatsapp {
+      background: #25D366;
+      color: #0A0A0A;
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.8px;
+      padding: 11px 18px;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      transition: all 0.25s ease;
+      text-decoration: none;
+    }
+    .btn-whatsapp:hover {
+      background: #20ba5a;
+      box-shadow: 0 0 16px rgba(37, 211, 102, 0.4);
+      transform: translateY(-2px);
+    }
+
+    /* 1. STICKY TOP ANNOUNCEMENT BAR */
+    .top-announcement-bar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--gold-gradient);
+      color: #0A0A0A;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      padding: 8px 16px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+    .top-announcement-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .announcement-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+    .top-links {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .top-links a {
+      color: #0A0A0A;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-weight: 700;
+      transition: opacity 0.2s;
+    }
+    .top-links a:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+
+    /* NAVIGATION */
+    .header-nav {
+      position: sticky;
+      top: 37px;
+      z-index: 999;
+      background: rgba(10, 10, 10, 0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-gold);
+      padding: 16px 24px;
+      transition: all 0.3s ease;
+    }
+    .nav-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .brand-crest {
+      width: 36px;
+      height: 36px;
+      border: 1px solid var(--gold-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-primary);
+      transform: rotate(45deg);
+      box-shadow: var(--gold-glow);
+    }
+    .brand-crest i {
+      transform: rotate(-45deg);
+      font-size: 1rem;
+    }
+    .brand-title {
+      font-size: 1.6rem;
+      font-weight: 800;
+      letter-spacing: 3px;
+      color: #FFFFFF;
+      text-transform: uppercase;
+    }
+    .brand-tagline {
+      font-size: 0.62rem;
+      letter-spacing: 4px;
+      color: var(--gold-primary);
+      display: block;
+      margin-top: -4px;
+      text-transform: uppercase;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: #E0E0E0;
+      text-decoration: none;
+      font-size: 0.82rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: all 0.25s ease;
+      position: relative;
+      padding-bottom: 4px;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--gold-primary);
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--gold-gradient);
+      transition: width 0.3s ease;
+    }
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .nav-icon-btn {
+      background: transparent;
+      border: none;
+      color: #E0E0E0;
+      font-size: 1.15rem;
+      cursor: pointer;
+      position: relative;
+      transition: color 0.2s;
+    }
+    .nav-icon-btn:hover {
+      color: var(--gold-primary);
+    }
+    .cart-badge {
+      position: absolute;
+      top: -8px;
+      right: -10px;
+      background: var(--gold-gradient);
+      color: #0A0A0A;
+      font-size: 0.68rem;
+      font-weight: 800;
+      width: 19px;
+      height: 19px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
+    }
+
+    /* 2. HERO SECTION */
+    .hero-section {
+      position: relative;
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      background: radial-gradient(circle at center, rgba(170, 119, 28, 0.15) 0%, rgba(10, 10, 10, 0.98) 70%),
+                  url('https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?auto=format&fit=crop&w=1600&q=85') center/cover no-repeat;
+      padding: 80px 24px;
+      border-bottom: 1px solid var(--border-gold);
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.7) 50%, rgba(10,10,10,0.95) 100%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .hero-subtitle {
+      font-size: 0.85rem;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: var(--gold-primary);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+    .hero-title {
+      font-size: clamp(2.5rem, 5.5vw, 4.8rem);
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 22px;
+      text-transform: uppercase;
+    }
+    .hero-description {
+      font-size: clamp(0.95rem, 1.2vw, 1.15rem);
+      color: #D1D1D1;
+      max-width: 680px;
+      margin: 0 auto 32px;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+    .hero-cta-group {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    /* Sale Countdown Banner in Hero */
+    .hero-timer-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      background: rgba(18, 18, 18, 0.85);
+      border: 1px solid var(--gold-primary);
+      padding: 10px 22px;
+      border-radius: 4px;
+      box-shadow: var(--gold-glow);
+    }
+    .timer-units {
+      display: flex;
+      gap: 12px;
+      font-size: 0.85rem;
+    }
+    .timer-num {
+      color: var(--gold-light);
+      font-weight: 800;
+      font-size: 1.1rem;
+    }
+
+    /* 3. TRUST BANNER ROW (4 GOLD CARDS) */
+    .trust-section {
+      padding: 40px 24px;
+      background: #0E0E0E;
+      border-bottom: 1px solid var(--border-gold);
+    }
+    .trust-grid {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .trust-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-gold);
+      padding: 24px 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .trust-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 100%;
+      background: var(--gold-gradient);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .trust-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--gold-primary);
+      box-shadow: var(--gold-glow);
+      background: var(--bg-card-hover);
+    }
+    .trust-card:hover::before {
+      opacity: 1;
+    }
+    .trust-icon-box {
+      width: 50px;
+      height: 50px;
+      flex-shrink: 0;
+      border: 1px solid var(--gold-primary);
+      background: rgba(212, 175, 55, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-primary);
+      font-size: 1.3rem;
+      box-shadow: var(--gold-glow);
+    }
+    .trust-card-title {
+      font-size: 0.92rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: #FFFFFF;
+      margin-bottom: 4px;
+    }
+    .trust-card-desc {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* SECTIONS COMMON */
+    .section-wrap {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 90px 24px;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .section-eyebrow {
+      font-size: 0.8rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold-primary);
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+    .section-title {
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .section-divider {
+      width: 80px;
+      height: 2px;
+      background: var(--gold-gradient);
+      margin: 0 auto 16px;
+    }
+    .section-desc {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    /* 3. CLOTHING PRODUCTS GRID */
+    .filter-bar {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+    .filter-btn {
+      background: rgba(18, 18, 18, 0.9);
+      border: 1px solid var(--border-gold);
+      color: #C0C0C0;
+      padding: 9px 20px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--gold-gradient);
+      color: #0A0A0A;
+      border-color: var(--gold-light);
+      box-shadow: var(--gold-glow);
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 32px;
+    }
+    @media (max-width: 480px) {
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .product-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-gold);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    .product-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--gold-primary);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8), var(--gold-glow);
+    }
+    .product-img-wrap {
+      position: relative;
+      height: 440px;
+      overflow: hidden;
+      background: #000;
+    }
+    .product-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform 0.6s ease;
+    }
+    .product-card:hover .product-img {
+      transform: scale(1.06);
+    }
+    .badge-sale {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: var(--gold-gradient);
+      color: #0A0A0A;
+      font-weight: 800;
+      font-size: 0.7rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 2px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      z-index: 2;
+    }
+    .quick-view-overlay-btn {
+      position: absolute;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%) translateY(30px);
+      opacity: 0;
+      background: rgba(10, 10, 10, 0.9);
+      border: 1px solid var(--gold-primary);
+      color: var(--gold-light);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 8px 18px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      z-index: 2;
+      white-space: nowrap;
+    }
+    .product-card:hover .quick-view-overlay-btn {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .product-info {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .product-cat {
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold-primary);
+      margin-bottom: 6px;
+    }
+    .product-title {
+      font-size: 1.18rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+    .price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .original-price {
+      text-decoration: line-through;
+      color: #777777;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+    .sale-price {
+      color: var(--gold-primary);
+      font-size: 1.3rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    /* Size Selector Pills */
+    .size-selector-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #AAAAAA;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+    .size-guide-link {
+      color: var(--gold-primary);
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 0.7rem;
+    }
+    .size-guide-link:hover {
+      text-decoration: underline;
+    }
+    .size-pills {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .size-pill {
+      background: #1B1B1B;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #E0E0E0;
+      width: 40px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.78rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border-radius: 2px;
+    }
+    .size-pill:hover {
+      border-color: var(--gold-primary);
+      color: var(--gold-light);
+    }
+    .size-pill.active {
+      background: var(--gold-gradient);
+      color: #0A0A0A;
+      border-color: #FCF6BA;
+      font-weight: 800;
+      box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+    }
+
+    .cod-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(37, 211, 102, 0.08);
+      border: 1px dashed rgba(37, 211, 102, 0.4);
+      color: #25D366;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      padding: 6px 10px;
+      border-radius: 2px;
+      margin-bottom: 18px;
+    }
+
+    .card-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: auto;
+    }
+    .btn-add-cart {
+      background: transparent;
+      border: 1px solid var(--gold-primary);
+      color: var(--gold-primary);
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.8px;
+      padding: 10px 8px;
+      cursor: pointer;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.25s ease;
+    }
+    .btn-add-cart:hover {
+      background: var(--gold-primary);
+      color: #0A0A0A;
+      box-shadow: var(--gold-glow);
+    }
+    .btn-wa-order {
+      background: #25D366;
+      border: none;
+      color: #0A0A0A;
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.5px;
+      padding: 10px 8px;
+      cursor: pointer;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.25s ease;
+      text-decoration: none;
+    }
+    .btn-wa-order:hover {
+      background: #20BA5A;
+      box-shadow: 0 0 12px rgba(37, 211, 102, 0.5);
+    }
+
+    /* 4. INSTAGRAM GRID SECTION */
+    .instagram-section {
+      background: #0E0E0E;
+      border-top: 1px solid var(--border-gold);
+      border-bottom: 1px solid var(--border-gold);
+      padding: 80px 24px;
+    }
+    .insta-grid {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+    @media (max-width: 900px) {
+      .insta-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 480px) {
+      .insta-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .insta-card {
+      position: relative;
+      height: 380px;
+      overflow: hidden;
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      cursor: pointer;
+    }
+    .insta-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .insta-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(10, 10, 10, 0.75);
+      backdrop-filter: blur(4px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: all 0.3s ease;
+      padding: 20px;
+      text-align: center;
+    }
+    .insta-card:hover .insta-img {
+      transform: scale(1.1);
+    }
+    .insta-card:hover .insta-overlay {
+      opacity: 1;
+    }
+    .insta-stats {
+      display: flex;
+      gap: 20px;
+      color: var(--gold-light);
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .insta-stats span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .insta-shop-btn {
+      background: var(--gold-gradient);
+      color: #0A0A0A;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 8px 16px;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: var(--gold-glow);
+    }
+
+    /* 5. FOOTER (4-COLUMN GOLD LAYOUT) */
+    .site-footer {
+      background: #080808;
+      border-top: 1px solid var(--border-gold);
+      padding: 70px 24px 30px;
+    }
+    .footer-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+    @media (max-width: 992px) {
+      .footer-container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (max-width: 580px) {
+      .footer-container {
+        grid-template-columns: 1fr;
+      }
+    }
+    .footer-col-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+    .footer-col-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 36px;
+      height: 2px;
+      background: var(--gold-gradient);
+    }
+    .footer-text {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .footer-contact-list {
+      list-style: none;
+    }
+    .footer-contact-list li {
+      margin-bottom: 12px;
+      font-size: 0.85rem;
+      color: #CCCCCC;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .footer-contact-list a {
+      color: #CCCCCC;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-contact-list a:hover {
+      color: var(--gold-primary);
+    }
+    .footer-contact-list i {
+      color: var(--gold-primary);
+      margin-top: 3px;
+    }
+    .footer-links {
+      list-style: none;
+    }
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .footer-links a:hover {
+      color: var(--gold-primary);
+      transform: translateX(4px);
+    }
+    .newsletter-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .newsletter-input {
+      background: #141414;
+      border: 1px solid var(--border-gold);
+      color: #FFFFFF;
+      padding: 12px 16px;
+      font-size: 0.85rem;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+    .newsletter-input:focus {
+      border-color: var(--gold-primary);
+      box-shadow: var(--gold-glow);
+    }
+    .footer-bottom {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.78rem;
+      color: #777777;
+    }
+    .payment-icons {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 1.4rem;
+      color: #AAAAAA;
+    }
+
+    /* 6. FLOATING ACTION BUTTON (BOTTOM-RIGHT) */
+    .floating-action-btn {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 990;
+      background: var(--gold-gradient);
+      color: #0A0A0A;
+      padding: 14px 22px;
+      border-radius: 50px;
+      font-weight: 800;
+      font-size: 0.82rem;
+      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+      cursor: pointer;
+      text-decoration: none;
+      animation: pulseGold 2.2s infinite;
+      transition: all 0.3s ease;
+      border: 1px solid #FCF6BA;
+    }
+    .floating-action-btn:hover {
+      transform: scale(1.05) translateY(-3px);
+      box-shadow: 0 12px 35px rgba(212, 175, 55, 0.75);
+    }
+    @keyframes pulseGold {
+      0% {
+        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 16px rgba(212, 175, 55, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
+      }
+    }
+
+    /* MOBILE BOTTOM NAVIGATION BAR (ANDROID & MOBILE APP FEEL) */
+    .mobile-bottom-nav {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(10, 10, 10, 0.96);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-top: 1px solid var(--border-gold);
+      z-index: 1050;
+      padding: 6px 10px calc(6px + env(safe-area-inset-bottom, 8px));
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.7);
+      justify-content: space-around;
+      align-items: center;
+    }
+    @media (max-width: 768px) {
+      body {
+        padding-bottom: calc(72px + env(safe-area-inset-bottom, 8px));
+      }
+      .mobile-bottom-nav {
+        display: flex;
+      }
+      .floating-action-btn {
+        bottom: calc(78px + env(safe-area-inset-bottom, 8px));
+        right: 16px;
+        padding: 10px 18px;
+        font-size: 0.76rem;
+      }
+    }
+    .mobile-nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      color: #A0A0A0;
+      text-decoration: none;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 6px 12px;
+      position: relative;
+      transition: all 0.2s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .mobile-nav-item i {
+      font-size: 1.15rem;
+      transition: transform 0.2s ease;
+    }
+    .mobile-nav-item:active {
+      transform: scale(0.92);
+      color: var(--gold-light);
+    }
+    .mobile-nav-item.active, .mobile-nav-item:hover {
+      color: var(--gold-primary);
+    }
+    .mobile-nav-item.active i {
+      transform: translateY(-2px);
+      color: var(--gold-light);
+    }
+    .mobile-nav-item.whatsapp-nav-item {
+      color: #25D366;
+    }
+    .mobile-nav-item.whatsapp-nav-item:hover, .mobile-nav-item.whatsapp-nav-item:active {
+      color: #2df578;
+    }
+    .mobile-cart-badge {
+      position: absolute;
+      top: 2px;
+      right: 14px;
+      background: var(--gold-gradient);
+      color: #0A0A0A;
+      font-size: 0.62rem;
+      font-weight: 800;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 6px rgba(212, 175, 55, 0.7);
+    }
+
+    /* PWA Install Banner (Android Prompt) */
+    .pwa-install-banner {
+      display: none;
+      position: fixed;
+      top: 85px;
+      left: 16px;
+      right: 16px;
+      background: rgba(18, 18, 18, 0.96);
+      border: 1px solid var(--gold-primary);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.8), var(--gold-glow);
+      backdrop-filter: blur(14px);
+      z-index: 1090;
+      padding: 12px 16px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      animation: modalSlideUp 0.3s ease;
+    }
+    .pwa-install-banner.active {
+      display: flex;
+    }
+
+    /* 7. CART SIDE DRAWER */
+    .cart-drawer-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(5px);
+      z-index: 1100;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.35s ease;
+    }
+    .cart-drawer-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    .cart-drawer {
+      position: fixed;
+      top: 0;
+      right: -450px;
+      width: 100%;
+      max-width: 440px;
+      height: 100vh;
+      background: #0E0E0E;
+      border-left: 1px solid var(--border-gold);
+      z-index: 1101;
+      display: flex;
+      flex-direction: column;
+      transition: right 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      box-shadow: -10px 0 30px rgba(0, 0, 0, 0.8);
+    }
+    .cart-drawer.active {
+      right: 0;
+    }
+    .cart-header {
+      padding: 22px;
+      border-bottom: 1px solid var(--border-gold);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .cart-close-btn {
+      background: transparent;
+      border: none;
+      color: #FFFFFF;
+      font-size: 1.3rem;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+    .cart-close-btn:hover {
+      color: var(--gold-primary);
+    }
+    .cart-cod-banner {
+      background: rgba(212, 175, 55, 0.12);
+      border-bottom: 1px solid var(--border-gold);
+      padding: 10px 20px;
+      font-size: 0.75rem;
+      color: var(--gold-light);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .cart-items-list {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .cart-item {
+      display: flex;
+      gap: 14px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      position: relative;
+    }
+    .cart-item-img {
+      width: 75px;
+      height: 95px;
+      object-fit: cover;
+      border: 1px solid var(--border-gold);
+    }
+    .cart-item-details {
+      flex: 1;
+    }
+    .cart-item-title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 4px;
+    }
+    .cart-item-meta {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+    .cart-item-price {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--gold-primary);
+      margin-bottom: 8px;
+    }
+    .cart-item-qty {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .qty-btn {
+      background: transparent;
+      border: none;
+      color: #FFFFFF;
+      width: 26px;
+      height: 26px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .qty-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--gold-primary);
+    }
+    .qty-val {
+      font-size: 0.8rem;
+      padding: 0 8px;
+      color: #FFF;
+    }
+    .cart-item-remove {
+      background: transparent;
+      border: none;
+      color: #777;
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    .cart-item-remove:hover {
+      color: #ff4d4d;
+    }
+    .cart-footer {
+      padding: 20px;
+      border-top: 1px solid var(--border-gold);
+      background: #0A0A0A;
+    }
+    .cart-subtotal-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .cart-drawer-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    /* 8. MODAL STYLES (COD POPUP & CONFIRMATION & SIZE GUIDE) */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 1200;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    .modal-box {
+      background: #111111;
+      border: 1px solid var(--gold-primary);
+      box-shadow: 0 0 35px rgba(212, 175, 55, 0.25);
+      max-width: 580px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+      padding: 32px 28px;
+      animation: modalSlideUp 0.3s ease forwards;
+    }
+    @keyframes modalSlideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: transparent;
+      border: none;
+      color: #999;
+      font-size: 1.4rem;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+    .modal-close:hover {
+      color: var(--gold-primary);
+    }
+    .form-group {
+      margin-bottom: 18px;
+    }
+    .form-label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #C0C0C0;
+      margin-bottom: 7px;
+    }
+    .form-label span.req {
+      color: var(--gold-primary);
+    }
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      background: #181818;
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      color: #FFFFFF;
+      padding: 12px 14px;
+      font-size: 0.88rem;
+      font-family: inherit;
+      outline: none;
+      transition: all 0.25s ease;
+    }
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: var(--gold-primary);
+      box-shadow: var(--gold-glow);
+    }
+    .form-row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 520px) {
+      .form-row-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* TOAST NOTIFICATION */
+    .toast-container {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      pointer-events: none;
+    }
+    .toast-msg {
+      background: #141414;
+      border: 1px solid var(--gold-primary);
+      color: #FFFFFF;
+      padding: 14px 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.8), var(--gold-glow);
+      font-size: 0.82rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      animation: toastIn 0.3s ease forwards;
+    }
+    @keyframes toastIn {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <!-- 1. STICKY TOP ANNOUNCEMENT BAR -->
+  <div class="top-announcement-bar">
+    <div class="top-announcement-container">
+      <div class="announcement-badge">
+        <i class="fa-solid fa-truck-fast"></i>
+        <span>🚚 CASH ON DELIVERY (COD) AVAILABLE NATIONWIDE | FREE EXPRESS SHIPPING</span>
+      </div>
+      <div class="top-links">
+        <a href="tel:+923001234567"><i class="fa-solid fa-phone"></i> 📞 Call/WhatsApp: +92 300 1234567</a>
+        <a href="https://instagram.com" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> 📸 @YourBrand.Official</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav class="header-nav">
+    <div class="nav-container">
+      <a href="#" class="brand-logo">
+        <div class="brand-crest">
+          <i class="fa-solid fa-crown"></i>
+        </div>
+        <div>
+          <div class="brand-title">TURBO LUXE</div>
+          <span class="brand-tagline">ROYAL COUTURE • HAUTE JOAILLERIE</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#products" class="active">Haute Collection</a></li>
+        <li><a href="#cod-guarantee">COD Guarantee</a></li>
+        <li><a href="#instagram-feed">Instagram Lookbook</a></li>
+        <li><a href="#vip-concierge">VIP Concierge</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="nav-icon-btn" onclick="openDirectWhatsAppPrompt()" title="Direct Stylist WhatsApp">
+          <i class="fa-brands fa-whatsapp" style="color: #25D366;"></i>
+        </button>
+        <button class="nav-icon-btn" id="open-cart-btn" onclick="toggleCartDrawer(true)" title="Shopping Cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-badge" id="cart-counter">0</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-subtitle">
+        <i class="fa-solid fa-gem"></i> THE PRIVATE ROYAL ATELIER <i class="fa-solid fa-gem"></i>
+      </div>
+      <h1 class="hero-title">
+        OPULENCE WOVEN IN <span class="gold-gradient-text">PURE GOLD</span>
+      </h1>
+      <p class="hero-description">
+        Exquisite South Asian bridal couture, bespoke velvet tuxedos, and handcrafted zardozi masterpieces. Delivered to your doorstep with 100% Cash On Delivery inspection rights.
+      </p>
+      
+      <div class="hero-cta-group">
+        <a href="#products" class="btn-gold">
+          <i class="fa-solid fa-crown"></i> Explore Royal Collection
+        </a>
+        <button class="btn-gold-outline" onclick="openCodModalQuick()">
+          <i class="fa-solid fa-truck-ramp-box"></i> Instant COD Order
+        </button>
+        <a href="https://wa.me/923001234567?text=Hello%20LUXE!%20I%20would%20like%20to%20inquire%20about%20your%20Haute%20Couture%20Collection%20via%20COD." target="_blank" class="btn-whatsapp">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp Concierge
+        </a>
+      </div>
+
+      <div class="hero-timer-pill">
+        <i class="fa-regular fa-clock" style="color: var(--gold-primary);"></i>
+        <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color:#ddd;">Private Golden Sale Ends In:</span>
+        <div class="timer-units">
+          <div><span class="timer-num" id="timer-hours">07</span>h</div>
+          <div><span class="timer-num" id="timer-minutes">42</span>m</div>
+          <div><span class="timer-num" id="timer-seconds">19</span>s</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. TRUST BANNER ROW (4 GOLD CARDS) -->
+  <section class="trust-section" id="cod-guarantee">
+    <div class="trust-grid">
+      <div class="trust-card">
+        <div class="trust-icon-box">
+          <i class="fa-solid fa-hand-holding-dollar"></i>
+        </div>
+        <div>
+          <h4 class="trust-card-title">Cash On Delivery Nationwide</h4>
+          <p class="trust-card-desc">Pay at your doorstep with 100% zero risk. Inspect your regal parcel before payment.</p>
+        </div>
+      </div>
+
+      <div class="trust-card">
+        <div class="trust-icon-box">
+          <i class="fa-solid fa-jet-fighter-up"></i>
+        </div>
+        <div>
+          <h4 class="trust-card-title">24-48 HR Express Delivery</h4>
+          <p class="trust-card-desc">Dispatched via luxury armoured courier in tamper-evident velvet-lined box.</p>
+        </div>
+      </div>
+
+      <div class="trust-card">
+        <div class="trust-icon-box">
+          <i class="fa-solid fa-certificate"></i>
+        </div>
+        <div>
+          <h4 class="trust-card-title">100% Original Guarantee</h4>
+          <p class="trust-card-desc">Pure raw silk, real metallic threads, and certified artisanal craftsmanship.</p>
+        </div>
+      </div>
+
+      <div class="trust-card">
+        <div class="trust-icon-box">
+          <i class="fa-solid fa-headset"></i>
+        </div>
+        <div>
+          <h4 class="trust-card-title">Instant Phone Support</h4>
+          <p class="trust-card-desc">24/7 dedicated personal stylist hotline via WhatsApp & Direct Calling.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BODY CONTENT: PRODUCTS, INSTAGRAM, FOOTER -->
+  <main id="app-content">
+    <!-- 3. CLOTHING PRODUCTS SECTION -->
+    <section class="section-wrap" id="products">
+      <div class="section-header">
+        <span class="section-eyebrow"><i class="fa-solid fa-crown"></i> Haute Couture Selection <i class="fa-solid fa-crown"></i></span>
+        <h2 class="section-title">Royal Garments & Bespoke Elegance</h2>
+        <div class="section-divider"></div>
+        <p class="section-desc">Hand-embroidered zardozi, pure silk, and fine cashmere. Every piece is crafted for royalty and shipped nationwide with zero-risk doorstep Cash On Delivery.</p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterCategory('all', this)">All Masterpieces</button>
+        <button class="filter-btn" onclick="filterCategory('bridal', this)">Bridal & Lehengas</button>
+        <button class="filter-btn" onclick="filterCategory('tuxedo', this)">Velvet Tuxedos & Coats</button>
+        <button class="filter-btn" onclick="filterCategory('sherwani', this)">Royal Sherwanis</button>
+        <button class="filter-btn" onclick="filterCategory('luxury', this)">Leather & Chiffon</button>
+      </div>
+
+      <!-- Product Grid (6 items) -->
+      <div class="products-grid" id="products-container">
+        <!-- Rendered by JavaScript dynamically with complete interactive states -->
+      </div>
+    </section>
+
+    <!-- 4. INSTAGRAM FEED INTEGRATION -->
+    <section class="instagram-section" id="instagram-feed">
+      <div class="section-header">
+        <span class="section-eyebrow"><i class="fa-brands fa-instagram"></i> The Royal Society</span>
+        <h2 class="section-title">AS SEEN ON INSTAGRAM <span class="gold-gradient-text">@YourBrand.Official</span></h2>
+        <div class="section-divider"></div>
+        <p class="section-desc">Explore opulent red carpet moments and high-society galas. Tag @YourBrand.Official to be featured in our private lookbook.</p>
+      </div>
+
+      <div class="insta-grid">
+        <!-- Post 1 -->
+        <div class="insta-card" onclick="openDirectWhatsAppPrompt('I would like to inquire about the Instagram Velvet Tuxedo look (#Luxe01).')">
+          <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=600&q=80" alt="Instagram Couture Post 1" class="insta-img">
+          <div class="insta-overlay">
+            <div class="insta-stats">
+              <span><i class="fa-solid fa-heart"></i> 4.2k</span>
+              <span><i class="fa-solid fa-comment"></i> 188</span>
+            </div>
+            <button class="insta-shop-btn">
+              <i class="fa-solid fa-bag-shopping"></i> Shop Instagram Look
+            </button>
+          </div>
+        </div>
+
+        <!-- Post 2 -->
+        <div class="insta-card" onclick="openDirectWhatsAppPrompt('I would like to inquire about the Instagram Royal Silk Bridal look (#Luxe02).')">
+          <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=600&q=80" alt="Instagram Couture Post 2" class="insta-img">
+          <div class="insta-overlay">
+            <div class="insta-stats">
+              <span><i class="fa-solid fa-heart"></i> 5.8k</span>
+              <span><i class="fa-solid fa-comment"></i> 324</span>
+            </div>
+            <button class="insta-shop-btn">
+              <i class="fa-solid fa-bag-shopping"></i> Shop Instagram Look
+            </button>
+          </div>
+        </div>
+
+        <!-- Post 3 -->
+        <div class="insta-card" onclick="openDirectWhatsAppPrompt('I would like to inquire about the Instagram Gold Atelier look (#Luxe03).')">
+          <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=600&q=80" alt="Instagram Couture Post 3" class="insta-img">
+          <div class="insta-overlay">
+            <div class="insta-stats">
+              <span><i class="fa-solid fa-heart"></i> 3.9k</span>
+              <span><i class="fa-solid fa-comment"></i> 142</span>
+            </div>
+            <button class="insta-shop-btn">
+              <i class="fa-solid fa-bag-shopping"></i> Shop Instagram Look
+            </button>
+          </div>
+        </div>
+
+        <!-- Post 4 -->
+        <div class="insta-card" onclick="openDirectWhatsAppPrompt('I would like to inquire about the Instagram Diamond Chiffon look (#Luxe04).')">
+          <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=600&q=80" alt="Instagram Couture Post 4" class="insta-img">
+          <div class="insta-overlay">
+            <div class="insta-stats">
+              <span><i class="fa-solid fa-heart"></i> 6.1k</span>
+              <span><i class="fa-solid fa-comment"></i> 402</span>
+            </div>
+            <button class="insta-shop-btn">
+              <i class="fa-solid fa-bag-shopping"></i> Shop Instagram Look
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center;">
+        <a href="https://instagram.com" target="_blank" rel="noopener" class="btn-gold-outline" style="border-radius: 50px;">
+          <i class="fa-brands fa-instagram"></i> Follow @YourBrand.Official on Instagram
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- 5. LUXURY 4-COLUMN FOOTER -->
+  <footer class="site-footer" id="vip-concierge">
+    <div class="footer-container">
+      <!-- Col 1: Brand Info -->
+      <div>
+        <div class="brand-logo" style="margin-bottom: 16px;">
+          <div class="brand-crest">
+            <i class="fa-solid fa-crown"></i>
+          </div>
+          <div>
+            <div class="brand-title" style="font-size: 1.3rem;">TURBO LUXE</div>
+            <span class="brand-tagline">ROYAL COUTURE</span>
+          </div>
+        </div>
+        <p class="footer-text">
+          TURBO LUXE is dedicated to preservation of imperial textile heritage and timeless silhouettes. Every embroidery stitch is executed by master zardozi artisans using spun gold filament and untreated mulberry silk.
+        </p>
+        <div style="display: flex; gap: 12px; margin-top: 14px;">
+          <a href="https://instagram.com" target="_blank" style="color: var(--gold-primary); font-size: 1.1rem;"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://wa.me/923001234567" target="_blank" style="color: #25D366; font-size: 1.1rem;"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="tel:+923001234567" style="color: var(--gold-light); font-size: 1.1rem;"><i class="fa-solid fa-phone"></i></a>
+        </div>
+      </div>
+
+      <!-- Col 2: Direct Contact & COD Hotline -->
+      <div>
+        <h4 class="footer-col-title">Direct Contact</h4>
+        <ul class="footer-contact-list">
+          <li>
+            <i class="fa-solid fa-phone-volume"></i>
+            <div>
+              <strong>COD VIP Hotline:</strong><br>
+              <a href="tel:+923001234567">+92 300 1234567</a>
+            </div>
+          </li>
+          <li>
+            <i class="fa-brands fa-whatsapp" style="color: #25D366;"></i>
+            <div>
+              <strong>Instant WhatsApp Sales:</strong><br>
+              <a href="https://wa.me/923001234567" target="_blank">+92 300 1234567</a>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <strong>Concierge Email:</strong><br>
+              <a href="mailto:vip@turboluxe.com">vip@turboluxe.com</a>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <strong>Private Flagship Atelier:</strong><br>
+              Gulberg III & Clifton VIP Boulevard, Pakistan
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Col 3: COD Terms & Policies -->
+      <div>
+        <h4 class="footer-col-title">COD Terms & Policy</h4>
+        <ul class="footer-links">
+          <li><a href="javascript:void(0)" onclick="openPolicyModal('cod')"><i class="fa-solid fa-angle-right"></i> Cash On Delivery Guidelines</a></li>
+          <li><a href="javascript:void(0)" onclick="openPolicyModal('shipping')"><i class="fa-solid fa-angle-right"></i> 24-48 HR Express Delivery</a></li>
+          <li><a href="javascript:void(0)" onclick="openPolicyModal('exchange')"><i class="fa-solid fa-angle-right"></i> 7-Day Doorstep Size Exchange</a></li>
+          <li><a href="javascript:void(0)" onclick="openPolicyModal('authenticity')"><i class="fa-solid fa-angle-right"></i> Certificate of Authenticity</a></li>
+          <li><a href="javascript:void(0)" onclick="openSizeGuideModal()"><i class="fa-solid fa-angle-right"></i> Royal Imperial Size Guide</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: VIP Newsletter -->
+      <div>
+        <h4 class="footer-col-title">VIP Private Access</h4>
+        <p class="footer-text">
+          Receive private invitations to confidential preview collections, seasonal trunk shows, and limited edition drops before public announcement.
+        </p>
+        <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+          <input type="email" required placeholder="Enter your royal email..." class="newsletter-input" id="newsletter-email">
+          <button type="submit" class="btn-gold" style="padding: 10px;">
+            <i class="fa-solid fa-gem"></i> Subscribe To VIP Salon
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>
+        © 2026 TURBO LUXE COUTURE. All Imperial Rights Reserved. Inspired by royal South Asian & European haute couture.
+      </div>
+      <div class="payment-icons">
+        <span style="font-size: 0.72rem; color: var(--gold-primary); text-transform: uppercase; letter-spacing: 1px; font-weight: 700;">
+          <i class="fa-solid fa-shield-halved"></i> 100% Verified COD Nationwide
+        </span>
+        <i class="fa-solid fa-money-bill-wave" title="Cash On Delivery"></i>
+        <i class="fa-brands fa-cc-visa" title="Visa"></i>
+        <i class="fa-brands fa-cc-mastercard" title="Mastercard"></i>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING ACTION BUTTON (BOTTOM RIGHT) -->
+  <div id="floating-action-root">
+    <a href="https://wa.me/923001234567?text=Hello%20TURBO!%20I%20would%20like%20to%20place%20a%20Cash%20On%20Delivery%20(COD)%20order." target="_blank" class="floating-action-btn" id="floating-cta">
+      <i class="fa-brands fa-whatsapp" style="font-size: 1.25rem;"></i>
+      <i class="fa-solid fa-phone" style="font-size: 0.95rem;"></i>
+      <span>Order via WhatsApp / COD</span>
+    </a>
+  </div>
+
+  <!-- BOTTOM MOBILE NAVIGATION BAR (FIXED STICKY FOR ANDROID & MOBILE SCREENS) -->
+  <nav class="mobile-bottom-nav" aria-label="Mobile Navigation">
+    <a href="#" class="mobile-nav-item active" onclick="handleMobileNavClick(event, 'home')">
+      <i class="fa-solid fa-house"></i>
+      <span>Home</span>
+    </a>
+    <a href="#products" class="mobile-nav-item" onclick="handleMobileNavClick(event, 'shop')">
+      <i class="fa-solid fa-gem"></i>
+      <span>Shop</span>
+    </a>
+    <button type="button" class="mobile-nav-item" onclick="toggleCartDrawer(true)" aria-label="Open Shopping Cart">
+      <i class="fa-solid fa-bag-shopping"></i>
+      <span>Cart</span>
+      <span class="mobile-cart-badge" id="cart-counter-mobile">0</span>
+    </button>
+    <a href="https://wa.me/923001234567?text=Hello%20TURBO%20LUXE!%20I%20would%20like%20to%20place%20an%20instant%20Cash%20On%20Delivery%20(COD)%20order." target="_blank" class="mobile-nav-item whatsapp-nav-item" aria-label="Order via WhatsApp COD">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>WhatsApp COD</span>
+    </a>
+  </nav>
+
+  <!-- PWA ANDROID INSTALL PROMPT BANNER -->
+  <div class="pwa-install-banner" id="pwa-banner">
+    <div style="display:flex; align-items:center; gap:10px;">
+      <div style="width:36px; height:36px; border:1px solid var(--gold-primary); display:flex; align-items:center; justify-content:center; color:var(--gold-primary); font-size:1rem;">
+        <i class="fa-solid fa-crown"></i>
+      </div>
+      <div>
+        <div style="font-size:0.82rem; font-weight:700; color:#FFF;">Install TURBO Android App</div>
+        <div style="font-size:0.7rem; color:#AAA;">Fast 1-tap COD shopping on your device</div>
+      </div>
+    </div>
+    <div style="display:flex; align-items:center; gap:8px;">
+      <button class="btn-gold" style="padding:6px 12px; font-size:0.72rem;" onclick="installPWA()">Install</button>
+      <button onclick="dismissPWABanner()" style="background:none; border:none; color:#777; font-size:1.1rem; cursor:pointer;" aria-label="Dismiss banner"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+  </div>
+
+  <!-- MODALS CONTAINER -->
+  <div id="modals-root">
+    <!-- 1. CART SIDE DRAWER -->
+    <div class="cart-drawer-overlay" id="cart-overlay" onclick="toggleCartDrawer(false)"></div>
+    <aside class="cart-drawer" id="cart-drawer">
+      <div class="cart-header">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <i class="fa-solid fa-bag-shopping" style="color: var(--gold-primary);"></i>
+          <h3 style="font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px;">Royal Cart</h3>
+          <span style="font-size: 0.8rem; color: #888;" id="drawer-item-count">(0)</span>
+        </div>
+        <button class="cart-close-btn" onclick="toggleCartDrawer(false)" aria-label="Close cart">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="cart-cod-banner">
+        <i class="fa-solid fa-shield-halved" style="color: var(--gold-primary);"></i>
+        <span><strong>100% Cash On Delivery:</strong> Pay zero in advance.</span>
+      </div>
+
+      <div class="cart-items-list" id="cart-items-list">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div class="cart-footer">
+        <div class="cart-subtotal-row">
+          <span style="color: #999; font-size: 0.85rem; text-transform: uppercase;">Estimated Total:</span>
+          <span style="color: var(--gold-primary); font-size: 1.35rem; font-weight: 800;" id="cart-total-price">PKR 0</span>
+        </div>
+        <p style="font-size: 0.72rem; color: #777; margin-bottom: 14px;">
+          <i class="fa-solid fa-check" style="color: #25D366;"></i> Free Insured Express Delivery included nationwide.
+        </p>
+        <div class="cart-drawer-actions">
+          <button class="btn-gold" style="width: 100%;" onclick="openCodModalFromCart()">
+            <i class="fa-solid fa-truck-ramp-box"></i> Proceed to COD Checkout
+          </button>
+          <button class="btn-whatsapp" style="width: 100%;" onclick="sendFullCartToWhatsApp()">
+            <i class="fa-brands fa-whatsapp"></i> Order Cart via WhatsApp
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 2. COD ORDER FORM POPUP MODAL -->
+    <div class="modal-overlay" id="cod-modal">
+      <div class="modal-box">
+        <button class="modal-close" onclick="closeCodModal()"><i class="fa-solid fa-xmark"></i></button>
+        
+        <div style="text-align: center; margin-bottom: 22px;">
+          <span style="font-size: 0.72rem; letter-spacing: 3px; color: var(--gold-primary); text-transform: uppercase; font-weight: 700;">Zero Advance Payment</span>
+          <h3 style="font-size: 1.45rem; text-transform: uppercase; color: #FFF; margin-top: 4px;">Nationwide COD Verification</h3>
+          <div style="width: 50px; height: 1.5px; background: var(--gold-gradient); margin: 8px auto 0;"></div>
+        </div>
+
+        <div id="cod-order-summary-box" style="background: #181818; border: 1px solid var(--border-gold); padding: 14px; margin-bottom: 20px; display: flex; align-items: center; gap: 14px;">
+          <!-- Injected via JS -->
+        </div>
+
+        <form id="cod-order-form" onsubmit="handleCodOrderSubmit(event)">
+          <div class="form-group">
+            <label class="form-label">Full Name <span class="req">*</span></label>
+            <input type="text" class="form-input" id="cod-name" required placeholder="e.g. Nawabzada Shaharyar Khan">
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label class="form-label">Mobile Number (For Courier Verification) <span class="req">*</span></label>
+              <input type="tel" class="form-input" id="cod-phone" required placeholder="0300 1234567" pattern="[0-9+ -]{10,15}">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Destination City <span class="req">*</span></label>
+              <select class="form-select" id="cod-city" required>
+                <option value="">Select City...</option>
+                <option value="Lahore">Lahore</option>
+                <option value="Karachi">Karachi</option>
+                <option value="Islamabad">Islamabad</option>
+                <option value="Rawalpindi">Rawalpindi</option>
+                <option value="Faisalabad">Faisalabad</option>
+                <option value="Multan">Multan</option>
+                <option value="Peshawar">Peshawar</option>
+                <option value="Quetta">Quetta</option>
+                <option value="Sialkot">Sialkot</option>
+                <option value="Gujranwala">Gujranwala</option>
+                <option value="Other">Other Nationwide City</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Complete Street Address (House/Plot #, Sector, Area) <span class="req">*</span></label>
+            <textarea class="form-textarea" id="cod-address" rows="2" required placeholder="House #, Street #, Sector / Area landmark..."></textarea>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label class="form-label">Confirm Garment Size <span class="req">*</span></label>
+              <select class="form-select" id="cod-size-select">
+                <option value="S">Small (S)</option>
+                <option value="M" selected>Medium (M)</option>
+                <option value="L">Large (L)</option>
+                <option value="XL">Extra Large (XL)</option>
+                <option value="Custom">Custom Royal Tailoring</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Delivery Note (Optional)</label>
+              <input type="text" class="form-input" id="cod-notes" placeholder="e.g. Call before arrival">
+            </div>
+          </div>
+
+          <div style="background: rgba(212, 175, 55, 0.08); border-left: 3px solid var(--gold-primary); padding: 10px 14px; margin-bottom: 20px; font-size: 0.74rem; color: #D0D0D0;">
+            <i class="fa-solid fa-lock" style="color: var(--gold-primary);"></i>
+            <strong>Doorstep Verification:</strong> You will inspect the garment upon delivery and pay our courier in Cash. Zero pre-payment required.
+          </div>
+
+          <button type="submit" class="btn-gold" style="width: 100%; padding: 14px;">
+            <i class="fa-solid fa-shield-check"></i> Place Cash On Delivery Order
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- 3. ORDER CONFIRMATION MODAL -->
+    <div class="modal-overlay" id="success-modal">
+      <div class="modal-box" style="text-align: center; max-width: 500px;">
+        <button class="modal-close" onclick="closeSuccessModal()"><i class="fa-solid fa-xmark"></i></button>
+        
+        <div style="width: 70px; height: 70px; border-radius: 50%; background: rgba(37, 211, 102, 0.15); border: 1px solid #25D366; display: flex; align-items: center; justify-content: center; margin: 0 auto 18px; color: #25D366; font-size: 2rem;">
+          <i class="fa-solid fa-check"></i>
+        </div>
+
+        <span style="color: var(--gold-primary); font-size: 0.78rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 700;">Imperial Order Dispatched</span>
+        <h3 style="font-size: 1.5rem; text-transform: uppercase; margin: 6px 0 12px; color: #FFF;">COD Order Confirmed!</h3>
+        <p style="font-size: 0.88rem; color: #CCC; margin-bottom: 20px;" id="success-lead-text">
+          Thank you. Your royal parcel is reserved. Our concierge will verify your dispatch via WhatsApp.
+        </p>
+
+        <div style="background: #161616; border: 1px dashed var(--gold-primary); padding: 16px; margin-bottom: 22px; text-align: left; font-size: 0.82rem;">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+            <span style="color: #888;">Tracking ID:</span>
+            <strong style="color: var(--gold-light);" id="success-tracking-id">AUR-COD-78321</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+            <span style="color: #888;">Total Amount Due on Delivery:</span>
+            <strong style="color: var(--gold-primary); font-size: 1rem;" id="success-amount">PKR 34,500</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+            <span style="color: #888;">Delivery Window:</span>
+            <span style="color: #FFF;">24 - 48 Hours Express</span>
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+            <span style="color: #888;">Payment Method:</span>
+            <span style="color: #25D366; font-weight: 700;"><i class="fa-solid fa-money-bill-wave"></i> Cash On Delivery (Doorstep)</span>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <a href="#" id="success-wa-link" target="_blank" class="btn-whatsapp" style="width: 100%; padding: 12px;">
+            <i class="fa-brands fa-whatsapp"></i> Confirm Instant Dispatch on WhatsApp
+          </a>
+          <button class="btn-gold-outline" onclick="closeSuccessModal()" style="width: 100%;">
+            Continue Haute Shopping
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. SIZE GUIDE MODAL -->
+    <div class="modal-overlay" id="size-guide-modal">
+      <div class="modal-box" style="max-width: 620px;">
+        <button class="modal-close" onclick="closeSizeGuideModal()"><i class="fa-solid fa-xmark"></i></button>
+        <div style="text-align: center; margin-bottom: 20px;">
+          <span style="font-size: 0.72rem; letter-spacing: 2px; color: var(--gold-primary); text-transform: uppercase;">Royal Atelier Measurements</span>
+          <h3 style="font-size: 1.4rem; text-transform: uppercase; color: #FFF; margin-top: 4px;">Imperial Garment Size Guide</h3>
+        </div>
+
+        <div style="overflow-x: auto; margin-bottom: 20px;">
+          <table style="width: 100%; border-collapse: collapse; font-size: 0.82rem; text-align: left;">
+            <thead>
+              <tr style="border-bottom: 1px solid var(--gold-primary); color: var(--gold-light);">
+                <th style="padding: 10px;">Size</th>
+                <th style="padding: 10px;">Chest (Inches)</th>
+                <th style="padding: 10px;">Waist (Inches)</th>
+                <th style="padding: 10px;">Hips (Inches)</th>
+                <th style="padding: 10px;">Length</th>
+              </tr>
+            </thead>
+            <tbody style="color: #CCC;">
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+                <td style="padding: 10px; font-weight: 700; color: #FFF;">Small (S)</td>
+                <td style="padding: 10px;">36 - 38"</td>
+                <td style="padding: 10px;">30 - 32"</td>
+                <td style="padding: 10px;">38 - 40"</td>
+                <td style="padding: 10px;">40"</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.08); background: rgba(212,175,55,0.04);">
+                <td style="padding: 10px; font-weight: 700; color: var(--gold-primary);">Medium (M)</td>
+                <td style="padding: 10px;">39 - 41"</td>
+                <td style="padding: 10px;">33 - 35"</td>
+                <td style="padding: 10px;">41 - 43"</td>
+                <td style="padding: 10px;">42"</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+                <td style="padding: 10px; font-weight: 700; color: #FFF;">Large (L)</td>
+                <td style="padding: 10px;">42 - 44"</td>
+                <td style="padding: 10px;">36 - 38"</td>
+                <td style="padding: 10px;">44 - 46"</td>
+                <td style="padding: 10px;">44"</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+                <td style="padding: 10px; font-weight: 700; color: #FFF;">X-Large (XL)</td>
+                <td style="padding: 10px;">45 - 48"</td>
+                <td style="padding: 10px;">39 - 42"</td>
+                <td style="padding: 10px;">47 - 50"</td>
+                <td style="padding: 10px;">46"</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 0.75rem; color: #888; text-align: center; margin-bottom: 16px;">
+          Need bespoke custom tailoring or assistance with bridal fitting? Our master stylist is available 24/7 on WhatsApp.
+        </p>
+        <button class="btn-whatsapp" onclick="openDirectWhatsAppPrompt('Hello LUXE! I would like assistance with custom sizing for an order.')" style="width: 100%;">
+          <i class="fa-brands fa-whatsapp"></i> Chat with Master Stylist for Sizing
+        </button>
+      </div>
+    </div>
+
+    <!-- 5. POLICY DETAILS MODAL -->
+    <div class="modal-overlay" id="policy-modal">
+      <div class="modal-box" style="max-width: 560px;">
+        <button class="modal-close" onclick="closePolicyModal()"><i class="fa-solid fa-xmark"></i></button>
+        <h3 id="policy-title" style="font-size: 1.35rem; color: var(--gold-light); margin-bottom: 12px; text-transform: uppercase;">Policy</h3>
+        <div id="policy-content" style="font-size: 0.85rem; color: #CCC; line-height: 1.7; margin-bottom: 20px;"></div>
+        <button class="btn-gold-outline" onclick="closePolicyModal()" style="width: 100%;">Understood</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST CONTAINER -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <script>
+    // ==========================================
+    // 1. PRODUCT CATALOG DATA
+    // ==========================================
+    const PRODUCTS = [
+      {
+        id: 1,
+        title: "Embroidered Velvet Tuxedo",
+        category: "tuxedo",
+        categoryLabel: "Royal Black Tie",
+        badge: "LIMITED EDITION",
+        originalPrice: 48000,
+        salePrice: 34500,
+        image: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=900&q=80",
+        description: "Midnight plush micro-velvet jacket adorned with hand-laid metallic gold bullion zari embroidery on lapels and cuffs. Fully silk lined.",
+        sizes: ["S", "M", "L", "XL"]
+      },
+      {
+        id: 2,
+        title: "Royal Silk Bridal Lehenga",
+        category: "bridal",
+        categoryLabel: "Imperial Bridal",
+        badge: "30% OFF - PRIVATE SALE",
+        originalPrice: 125000,
+        salePrice: 89000,
+        image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=80",
+        description: "Opulent raw crimson silk ensemble encrusted with real gold wire work (dabka & naqshi), Swarovski crystals, and vintage floral motifs.",
+        sizes: ["S", "M", "L", "XL"]
+      },
+      {
+        id: 3,
+        title: "Gold-Accented Italian Leather Jacket",
+        category: "luxury",
+        categoryLabel: "Haute Outerwear",
+        badge: "EXCLUSIVE DROP",
+        originalPrice: 55000,
+        salePrice: 38500,
+        image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=900&q=80",
+        description: "Supple full-grain Italian lambskin leather accented with 24k electroplated gold heavy-gauge zippers and engraved crown snap buttons.",
+        sizes: ["S", "M", "L", "XL"]
+      },
+      {
+        id: 4,
+        title: "Tailored Double-Breasted Cashmere Coat",
+        category: "tuxedo",
+        categoryLabel: "Bespoke Overcoat",
+        badge: "HAUTE CLASSIC",
+        originalPrice: 62000,
+        salePrice: 44000,
+        image: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=900&q=80",
+        description: "Superfine 100% pure Himalayan Cashmere tailored with razor-sharp peaked lapels, horn buttons, and handcrafted interior pick stitching.",
+        sizes: ["S", "M", "L", "XL"]
+      },
+      {
+        id: 5,
+        title: "Handcrafted Raw Silk Royal Sherwani",
+        category: "sherwani",
+        categoryLabel: "Regal Groom & Gala",
+        badge: "ARTISANAL COUTURE",
+        originalPrice: 95000,
+        salePrice: 68000,
+        image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=900&q=80",
+        description: "Subtle champagne woven raw silk structured sherwani with tone-on-tone tilla embroidery, antique brass buttons, and bespoke inner lining.",
+        sizes: ["S", "M", "L", "XL"]
+      },
+      {
+        id: 6,
+        title: "Diamond Chiffon Embellished Gown",
+        category: "luxury",
+        categoryLabel: "Soirée Couture",
+        badge: "35% OFF - SALE",
+        originalPrice: 42000,
+        salePrice: 29400,
+        image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80",
+        description: "Ethereal translucent golden chiffon dupatta & evening silhouette glistening with microscopic gold sequins and hand-knotted pearl borders.",
+        sizes: ["S", "M", "L", "XL"]
+      }
+    ];
+
+    // ==========================================
+    // 2. STATE MANAGEMENT
+    // ==========================================
+    const selectedSizes = {
+      1: "M",
+      2: "M",
+      3: "M",
+      4: "M",
+      5: "M",
+      6: "M"
+    };
+
+    let cart = [];
+    let currentActiveCategory = "all";
+    let pendingCodCheckoutItem = null; // null means whole cart, otherwise specific product
+
+    // Format currency in Pakistani Rupee (PKR)
+    function formatPKR(amount) {
+      return "PKR " + Number(amount).toLocaleString('en-US');
+    }
+
+    // ==========================================
+    // 3. RENDER PRODUCTS GRID
+    // ==========================================
+    function renderProducts(category = "all") {
+      const container = document.getElementById('products-container');
+      if (!container) return;
+
+      const filtered = category === "all" 
+        ? PRODUCTS 
+        : PRODUCTS.filter(p => p.category === category);
+
+      container.innerHTML = filtered.map(product => {
+        const curSize = selectedSizes[product.id] || "M";
+        return `
+          <article class="product-card" id="product-${product.id}">
+            <div class="product-img-wrap">
+              <span class="badge-sale">${product.badge}</span>
+              <img src="${product.image}" alt="${product.title}" class="product-img" loading="lazy">
+              <button class="quick-view-overlay-btn" onclick="openCodModalSingle(${product.id})">
+                <i class="fa-solid fa-bolt"></i> Instant COD Buy
+              </button>
+            </div>
+
+            <div class="product-info">
+              <span class="product-cat">${product.categoryLabel}</span>
+              <h3 class="product-title">${product.title}</h3>
+              
+              <div class="price-row">
+                <span class="original-price">${formatPKR(product.originalPrice)}</span>
+                <span class="sale-price">${formatPKR(product.salePrice)}</span>
+              </div>
+
+              <div class="size-selector-label">
+                <span>Select Size: <strong id="size-display-${product.id}" style="color:var(--gold-primary);">${curSize}</strong></span>
+                <span class="size-guide-link" onclick="openSizeGuideModal()"><i class="fa-solid fa-ruler-combined"></i> Size Guide</span>
+              </div>
+
+              <div class="size-pills">
+                ${product.sizes.map(size => `
+                  <button type="button" 
+                    class="size-pill ${size === curSize ? 'active' : ''}" 
+                    onclick="selectProductSize(${product.id}, '${size}', this)">
+                    ${size}
+                  </button>
+                `).join('')}
+              </div>
+
+              <div class="cod-badge">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>✅ Cash On Delivery Eligible (Zero Advance)</span>
+              </div>
+
+              <div class="card-actions">
+                <button type="button" class="btn-add-cart" onclick="addToCart(${product.id})">
+                  <i class="fa-solid fa-bag-shopping"></i> Add to Cart
+                </button>
+                <button type="button" class="btn-wa-order" onclick="triggerWhatsAppOrder(${product.id})">
+                  <i class="fa-brands fa-whatsapp"></i> WhatsApp COD
+                </button>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    // Android Haptic Vibration Feedback
+    function triggerHaptic() {
+      if (window.navigator && typeof window.navigator.vibrate === 'function') {
+        try { window.navigator.vibrate(25); } catch (e) {}
+      }
+    }
+
+    // Mobile Bottom Nav Switcher
+    function handleMobileNavClick(event, destination) {
+      document.querySelectorAll('.mobile-nav-item').forEach(el => el.classList.remove('active'));
+      if (event && event.currentTarget) event.currentTarget.classList.add('active');
+      triggerHaptic();
+      if (destination === 'home') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    // PWA Android Install Prompt
+    let deferredPrompt = null;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      const banner = document.getElementById('pwa-banner');
+      if (banner) banner.classList.add('active');
+    });
+
+    function installPWA() {
+      triggerHaptic();
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            showToast('TURBO App installed to home screen!');
+          }
+          deferredPrompt = null;
+          dismissPWABanner();
+        });
+      } else {
+        showToast('To install: tap Chrome menu (⋮) -> Add to Home screen');
+      }
+    }
+
+    function dismissPWABanner() {
+      const banner = document.getElementById('pwa-banner');
+      if (banner) banner.classList.remove('active');
+    }
+
+    // Interactive Size Selection
+    function selectProductSize(productId, size, btnElem) {
+      triggerHaptic();
+      selectedSizes[productId] = size;
+      const display = document.getElementById(`size-display-${productId}`);
+      if (display) display.textContent = size;
+
+      const card = document.getElementById(`product-${productId}`);
+      if (card) {
+        card.querySelectorAll('.size-pill').forEach(btn => btn.classList.remove('active'));
+        btnElem.classList.add('active');
+      }
+    }
+
+    // Category Filtering
+    function filterCategory(cat, buttonElem) {
+      triggerHaptic();
+      currentActiveCategory = cat;
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      buttonElem.classList.add('active');
+      renderProducts(cat);
+    }
+
+    // ==========================================
+    // 4. WHATSAPP ORDER INTEGRATION (EXACT FORMAT)
+    // ==========================================
+    // Format: "Hello TURBO! I would like to order [Product Name] in Size [Selected Size] for [Price] via Cash On Delivery."
+    function triggerWhatsAppOrder(productId) {
+      triggerHaptic();
+      const product = PRODUCTS.find(p => p.id === productId);
+      if (!product) return;
+
+      const size = selectedSizes[productId] || "M";
+      const formattedPrice = formatPKR(product.salePrice);
+      
+      const message = `Hello TURBO! I would like to order ${product.title} in Size ${size} for ${formattedPrice} via Cash On Delivery.`;
+      const encodedMsg = encodeURIComponent(message);
+      const waUrl = `https://wa.me/923001234567?text=${encodedMsg}`;
+      
+      window.open(waUrl, '_blank');
+      showToast(`Initiating WhatsApp COD Concierge for ${product.title}...`);
+    }
+
+    function openDirectWhatsAppPrompt(customNote) {
+      triggerHaptic();
+      const text = customNote || "Hello TURBO! I would like to inquire about your Haute Couture Collection via Cash On Delivery.";
+      const url = `https://wa.me/923001234567?text=${encodeURIComponent(text)}`;
+      window.open(url, '_blank');
+    }
+
+    function sendFullCartToWhatsApp() {
+      triggerHaptic();
+      if (cart.length === 0) {
+        showToast("Your cart is empty. Please add garments first.");
+        return;
+      }
+
+      let itemsSummary = cart.map(item => `• ${item.title} (Size: ${item.size}) x${item.quantity} = ${formatPKR(item.salePrice * item.quantity)}`).join('\n');
+      const total = cart.reduce((acc, item) => acc + (item.salePrice * item.quantity), 0);
+
+      const message = `Hello TURBO! I would like to order the following items via Cash On Delivery (COD):\n\n${itemsSummary}\n\nTotal Due on Delivery: ${formatPKR(total)}\nPayment Method: Cash On Delivery\n\nPlease confirm dispatch window.`;
+      const url = `https://wa.me/923001234567?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+    }
+
+    // ==========================================
+    // 5. SHOPPING CART LOGIC
+    // ==========================================
+    function addToCart(productId) {
+      triggerHaptic();
+      const product = PRODUCTS.find(p => p.id === productId);
+      if (!product) return;
+
+      const size = selectedSizes[productId] || "M";
+      const existing = cart.find(item => item.id === productId && item.size === size);
+
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        cart.push({
+          ...product,
+          size: size,
+          quantity: 1
+        });
+      }
+
+      updateCartUI();
+      toggleCartDrawer(true);
+      showToast(`Added "${product.title}" (${size}) to Royal Cart.`);
+    }
+
+    function updateQuantity(index, delta) {
+      triggerHaptic();
+      if (cart[index]) {
+        cart[index].quantity += delta;
+        if (cart[index].quantity <= 0) {
+          cart.splice(index, 1);
+        }
+      }
+      updateCartUI();
+    }
+
+    function removeFromCart(index) {
+      triggerHaptic();
+      if (cart[index]) {
+        const removedTitle = cart[index].title;
+        cart.splice(index, 1);
+        updateCartUI();
+        showToast(`Removed "${removedTitle}" from cart.`);
+      }
+    }
+
+    function updateCartUI() {
+      const totalCount = cart.reduce((acc, item) => acc + item.quantity, 0);
+      const totalPrice = cart.reduce((acc, item) => acc + (item.salePrice * item.quantity), 0);
+
+      // Badge Counter for Desktop Navbar
+      const counter = document.getElementById('cart-counter');
+      if (counter) counter.textContent = totalCount;
+
+      // Badge Counter for Mobile Bottom Nav
+      const counterMobile = document.getElementById('cart-counter-mobile');
+      if (counterMobile) counterMobile.textContent = totalCount;
+
+      const drawerCount = document.getElementById('drawer-item-count');
+      if (drawerCount) drawerCount.textContent = `(${totalCount})`;
+
+      const totalPriceElem = document.getElementById('cart-total-price');
+      if (totalPriceElem) totalPriceElem.textContent = formatPKR(totalPrice);
+
+      // Items list inside drawer
+      const list = document.getElementById('cart-items-list');
+      if (!list) return;
+
+      if (cart.length === 0) {
+        list.innerHTML = `
+          <div style="text-align: center; padding: 40px 20px; color: #888;">
+            <i class="fa-solid fa-gem" style="font-size: 2.5rem; color: var(--gold-primary); margin-bottom: 12px; display: block;"></i>
+            <p style="font-size: 0.95rem; margin-bottom: 16px;">Your Royal Cart is empty.</p>
+            <a href="#products" class="btn-gold-outline" onclick="toggleCartDrawer(false)">Explore Collection</a>
+          </div>
+        `;
+        return;
+      }
+
+      list.innerHTML = cart.map((item, index) => `
+        <div class="cart-item">
+          <img src="${item.image}" alt="${item.title}" class="cart-item-img">
+          <div class="cart-item-details">
+            <h4 class="cart-item-title">${item.title}</h4>
+            <div class="cart-item-meta">Size: <strong style="color:var(--gold-primary);">${item.size}</strong> • COD Verified</div>
+            <div class="cart-item-price">${formatPKR(item.salePrice * item.quantity)}</div>
+            
+            <div class="cart-item-qty">
+              <button class="qty-btn" onclick="updateQuantity(${index}, -1)" title="Decrease">-</button>
+              <span class="qty-val">${item.quantity}</span>
+              <button class="qty-btn" onclick="updateQuantity(${index}, 1)" title="Increase">+</button>
+            </div>
+          </div>
+          <button class="cart-item-remove" onclick="removeFromCart(${index})" title="Remove item">
+            <i class="fa-solid fa-trash-can"></i>
+          </button>
+        </div>
+      `).join('');
+    }
+
+    function toggleCartDrawer(isOpen) {
+      const drawer = document.getElementById('cart-drawer');
+      const overlay = document.getElementById('cart-overlay');
+      if (isOpen) {
+        drawer.classList.add('active');
+        overlay.classList.add('active');
+      } else {
+        drawer.classList.remove('active');
+        overlay.classList.remove('active');
+      }
+    }
+
+    // ==========================================
+    // 6. COD ORDER FORM POPUP MODAL
+    // ==========================================
+    function openCodModalSingle(productId) {
+      const product = PRODUCTS.find(p => p.id === productId);
+      if (!product) return;
+      pendingCodCheckoutItem = {
+        ...product,
+        size: selectedSizes[productId] || "M"
+      };
+
+      const summaryBox = document.getElementById('cod-order-summary-box');
+      summaryBox.innerHTML = `
+        <img src="${product.image}" alt="${product.title}" style="width: 50px; height: 65px; object-fit: cover; border: 1px solid var(--gold-primary);">
+        <div style="flex:1;">
+          <h4 style="font-size: 0.92rem; color: #FFF;">${product.title}</h4>
+          <span style="font-size: 0.76rem; color: #AAA;">Garment Size: <strong style="color:var(--gold-light);">${pendingCodCheckoutItem.size}</strong></span><br>
+          <span style="font-size: 0.95rem; font-weight: 700; color: var(--gold-primary);">${formatPKR(product.salePrice)}</span>
+        </div>
+        <div style="text-align: right;">
+          <span style="font-size: 0.7rem; color: #25D366; background: rgba(37,211,102,0.1); padding: 4px 8px; border-radius: 2px;">
+            <i class="fa-solid fa-truck"></i> Free COD Delivery
+          </span>
+        </div>
+      `;
+
+      const sizeSelect = document.getElementById('cod-size-select');
+      if (sizeSelect) sizeSelect.value = pendingCodCheckoutItem.size;
+
+      document.getElementById('cod-modal').classList.add('active');
+    }
+
+    function openCodModalFromCart() {
+      if (cart.length === 0) {
+        showToast("Your cart is empty. Please select a luxury garment first.");
+        return;
+      }
+      pendingCodCheckoutItem = null; // Whole cart
+      toggleCartDrawer(false);
+
+      const total = cart.reduce((acc, item) => acc + (item.salePrice * item.quantity), 0);
+      const summaryBox = document.getElementById('cod-order-summary-box');
+      summaryBox.innerHTML = `
+        <div style="flex:1;">
+          <h4 style="font-size: 0.95rem; color: #FFF;"><i class="fa-solid fa-boxes-stacked" style="color:var(--gold-primary);"></i> Royal Cart Checkout (${cart.length} unique garments)</h4>
+          <span style="font-size: 0.78rem; color: #AAA;">Nationwide Doorstep Inspection & Cash On Delivery</span>
+        </div>
+        <div style="text-align: right;">
+          <span style="font-size: 1.15rem; font-weight: 800; color: var(--gold-primary);">${formatPKR(total)}</span><br>
+          <span style="font-size: 0.68rem; color: #25D366;"><i class="fa-solid fa-circle-check"></i> Free COD Shipping</span>
+        </div>
+      `;
+
+      document.getElementById('cod-modal').classList.add('active');
+    }
+
+    function openCodModalQuick() {
+      // Default to first product if none selected
+      openCodModalSingle(1);
+    }
+
+    function closeCodModal() {
+      document.getElementById('cod-modal').classList.remove('active');
+    }
+
+    function handleCodOrderSubmit(event) {
+      event.preventDefault();
+      
+      const name = document.getElementById('cod-name').value.trim();
+      const phone = document.getElementById('cod-phone').value.trim();
+      const city = document.getElementById('cod-city').value;
+      const address = document.getElementById('cod-address').value.trim();
+      const size = document.getElementById('cod-size-select').value;
+      const notes = document.getElementById('cod-notes').value.trim();
+
+      if (!name || !phone || !city || !address) {
+        showToast("Please fill in all required verification fields.");
+        return;
+      }
+
+      // Generate random Tracking ID
+      const randomNum = Math.floor(10000 + Math.random() * 90000);
+      const trackingId = `AUR-COD-${randomNum}`;
+
+      let orderTotal = 0;
+      let orderTitle = "";
+
+      if (pendingCodCheckoutItem) {
+        orderTotal = pendingCodCheckoutItem.salePrice;
+        orderTitle = `${pendingCodCheckoutItem.title} (Size: ${size})`;
+      } else {
+        orderTotal = cart.reduce((acc, item) => acc + (item.salePrice * item.quantity), 0);
+        orderTitle = `Royal Cart (${cart.length} items)`;
+        cart = []; // clear cart
+        updateCartUI();
+      }
+
+      // Populate Success Modal
+      document.getElementById('success-tracking-id').textContent = trackingId;
+      document.getElementById('success-amount').textContent = formatPKR(orderTotal);
+      document.getElementById('success-lead-text').textContent = `Thank you, ${name}. Your order for ${orderTitle} has been registered for delivery to ${city}. You only pay upon physical inspection at your doorstep.`;
+
+      // Build WhatsApp confirmation link
+      const waMsg = `Hello TURBO LUXE! I have placed COD Order #${trackingId} for ${orderTitle}.
+Name: ${name}
+Phone: ${phone}
+City: ${city}
+Address: ${address}
+Total Due on Delivery: ${formatPKR(orderTotal)}
+Please verify and dispatch.`;
+
+      document.getElementById('success-wa-link').href = `https://wa.me/923001234567?text=${encodeURIComponent(waMsg)}`;
+
+      closeCodModal();
+      document.getElementById('success-modal').classList.add('active');
+      showToast(`Order #${trackingId} successfully registered!`);
+      
+      // Reset form
+      document.getElementById('cod-order-form').reset();
+    }
+
+    function closeSuccessModal() {
+      document.getElementById('success-modal').classList.remove('active');
+    }
+
+    // ==========================================
+    // 7. SIZE GUIDE & POLICY MODALS
+    // ==========================================
+    function openSizeGuideModal() {
+      document.getElementById('size-guide-modal').classList.add('active');
+    }
+    function closeSizeGuideModal() {
+      document.getElementById('size-guide-modal').classList.remove('active');
+    }
+
+    function openPolicyModal(type) {
+      const modal = document.getElementById('policy-modal');
+      const titleElem = document.getElementById('policy-title');
+      const contentElem = document.getElementById('policy-content');
+
+      if (type === 'cod') {
+        titleElem.textContent = "Cash On Delivery (COD) Guidelines";
+        contentElem.innerHTML = `
+          <p><strong>1. Zero Risk Payment:</strong> You do not pay a single rupee in advance. Payment is made entirely in cash to the delivery courier once the sealed luxury box arrives at your destination.</p>
+          <p style="margin-top:10px;"><strong>2. Doorstep Inspection:</strong> You are entitled to examine the outer tamper-evident seal and packaging before handing over cash payment.</p>
+          <p style="margin-top:10px;"><strong>3. Courier Verification Call:</strong> Before dispatch, our dispatch office will place an automated or WhatsApp confirmation call to verify your address.</p>
+        `;
+      } else if (type === 'shipping') {
+        titleElem.textContent = "24-48 HR Nationwide Express Delivery";
+        contentElem.innerHTML = `
+          <p>All orders placed before 4:00 PM PKT are processed within our private atelier on the same day. Major metropolitan hubs (Lahore, Karachi, Islamabad, Rawalpindi) receive priority 24-Hour courier dispatch.</p>
+          <p style="margin-top:10px;">Every parcel travels in a heavy-gauge gold-embossed keepsake garment box with dust bags and hanger included.</p>
+        `;
+      } else if (type === 'exchange') {
+        titleElem.textContent = "7-Day Doorstep Size Replacement";
+        contentElem.innerHTML = `
+          <p>We pride ourselves on imperial tailoring. If the garment sizing requires minor adjustment or an alternative size, our courier will deliver the replacement size directly to your doorstep and collect the original at zero extra charge.</p>
+        `;
+      } else if (type === 'authenticity') {
+        titleElem.textContent = "Imperial Certificate of Authenticity";
+        contentElem.innerHTML = `
+          <p>Each TURBO LUXE piece includes an individually numbered hologram authenticity card signed by our lead couturier, certifying genuine 100% pure silk, pure wool cashmere, or certified metals.</p>
+        `;
+      }
+
+      modal.classList.add('active');
+    }
+
+    function closePolicyModal() {
+      document.getElementById('policy-modal').classList.remove('active');
+    }
+
+    // ==========================================
+    // 8. NEWSLETTER & NOTIFICATIONS
+    // ==========================================
+    function handleNewsletterSubmit(e) {
+      e.preventDefault();
+      const input = document.getElementById('newsletter-email');
+      if (input && input.value) {
+        showToast(`VIP Access granted to ${input.value}. Welcome to the Royal Salon.`);
+        input.value = '';
+      }
+    }
+
+    function showToast(message) {
+      const container = document.getElementById('toast-container');
+      if (!container) return;
+
+      const toast = document.createElement('div');
+      toast.className = 'toast-msg';
+      toast.innerHTML = `<i class="fa-solid fa-crown" style="color:var(--gold-primary);"></i> <span>${message}</span>`;
+      
+      container.appendChild(toast);
+
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateY(10px)';
+        toast.style.transition = 'all 0.3s ease';
+        setTimeout(() => toast.remove(), 300);
+      }, 3500);
+    }
+
+    // ==========================================
+    // 9. COUNTDOWN TIMER
+    // ==========================================
+    function startCountdown() {
+      let secondsLeft = 7 * 3600 + 42 * 60 + 19;
+      setInterval(() => {
+        if (secondsLeft > 0) {
+          secondsLeft--;
+          const hrs = Math.floor(secondsLeft / 3600);
+          const mins = Math.floor((secondsLeft % 3600) / 60);
+          const secs = secondsLeft % 60;
+
+          const hEl = document.getElementById('timer-hours');
+          const mEl = document.getElementById('timer-minutes');
+          const sEl = document.getElementById('timer-seconds');
+
+          if (hEl) hEl.textContent = String(hrs).padStart(2, '0');
+          if (mEl) mEl.textContent = String(mins).padStart(2, '0');
+          if (sEl) sEl.textContent = String(secs).padStart(2, '0');
+        }
+      }, 1000);
+    }
+
+    // ==========================================
+    // 10. INITIALIZATION
+    // ==========================================
+    document.addEventListener('DOMContentLoaded', () => {
+      renderProducts("all");
+      updateCartUI();
+      startCountdown();
+    });
+  </script>
+</body>
+</html>
